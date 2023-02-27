@@ -1,0 +1,138 @@
+body {
+    padding: 0;
+    margin: 0
+}
+
+#unity-container {
+    position: absolute
+}
+
+#unity-container.unity-desktop {
+    left: 50%;
+    top: 50%;
+    background: white;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#unity-container.unity-mobile {
+    width: 100%;
+    height: 100%
+}
+
+#unity-canvas {
+    background: #ffffff
+}
+
+.unity-mobile #unity-canvas {
+    width: 100%;
+    height: 100%
+}
+
+#unity-loading-bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none
+}
+
+#unity-logo {
+    width: 154px;
+    height: 130px;
+    background: url('unity-logo-dark.png') no-repeat center
+}
+
+#unity-progress-bar-empty {
+    width: 141px;
+    height: 18px;
+    margin-top: 10px;
+    margin-left: 6.5px;
+    background: url('progress-bar-empty-dark.png') no-repeat center
+}
+
+#unity-progress-bar-full {
+    width: 0%;
+    height: 18px;
+    margin-top: 10px;
+    background: url('progress-bar-full-dark.png') no-repeat center
+}
+
+#unity-footer {
+    position: relative
+}
+
+.unity-mobile #unity-footer {
+    display: none
+}
+
+#unity-webgl-logo {
+    float: left;
+    width: 204px;
+    height: 38px;
+    background: url('webgl-logo.png') no-repeat center
+}
+
+#unity-build-title {
+    float: right;
+    margin-right: 10px;
+    line-height: 38px;
+    font-family: arial;
+    font-size: 18px
+}
+
+#unity-telegram-button {
+    float: right;
+    padding-top: 6px;
+    width: 38px;
+    height: 38px;
+    background: url('telegram-button.png') no-repeat center
+}
+
+/* #unity-diskord-button { float: left; padding-top: 6px; width: 38px; height: 38px; background: url('diskord-button.png') no-repeat center }
+#unity-telegram-button { float: left; padding-top: 6px; padding-left: 20px; width: 38px; height: 38px; background: url('telegram-button.png') no-repeat center } */
+#unity-warning {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%);
+    background: white;
+    padding: 10px;
+    display: none
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.glow-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 40px #003cff inset, 0 0 0 0 #003cff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    transition: .15s ease-in-out;
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 10px 0 #003cff inset, 0 0 10px 4px #003cff;
+    color: #003cff;
+}
