@@ -31,7 +31,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
   <div id="unity-container" class="unity-desktop">
-    <img class="shadow" id="SPLASH_SCREEN2" src="TemplateData/SPLASH_SCREEN2.png" style="position: absolute;">
     <img class="shadow" id="SPLASH_SCREEN" src="TemplateData/SPLASH_SCREEN.png" style="position: absolute;">
     <p id="text_change" style="position: absolute; left: 50%; bottom: 9%; color: rgb(255, 255, 255);">123</p>
     <canvas class="shadow" id="unity-canvas" width=1280 height=720></canvas>
@@ -51,12 +50,10 @@
     var container = document.querySelector("#unity-container");
     var canvas = document.querySelector("#unity-canvas");
     var SPLASH_SCREEN = document.querySelector("#SPLASH_SCREEN");
-    var SPLASH_SCREEN2 = document.querySelector("#SPLASH_SCREEN2");
     var loadingBar = document.querySelector("#unity-loading-bar");
     var progressBarFull = document.querySelector("#unity-progress-bar-full");
     var warningBanner = document.querySelector("#unity-warning");
 
-    SPLASH_SCREEN2.style.display = "none";
 
     function unityShowBanner(msg, type) {
       function updateBannerVisibility() {
@@ -100,8 +97,6 @@
 
     SPLASH_SCREEN.style.height = canvas.style.height;
     SPLASH_SCREEN.style.width = canvas.style.width;
-    SPLASH_SCREEN2.style.height = canvas.style.height;
-    SPLASH_SCREEN2.style.width = canvas.style.width;
 
     loadingBar.style.display = "block";
     loadingBar.style.display = "none";
@@ -116,12 +111,10 @@
         p.innerHTML = Math.ceil(100 * progress) + "%";
       }).then((unityInstance) => {
         myGameInstance = unityInstance;
-        SPLASH_SCREEN.style.display = "none";
-        SPLASH_SCREEN2.style.display = "block";
         loadingBar.style.display = "none";
         p.style.display = "none";
         setTimeout(function () {
-          SPLASH_SCREEN2.style.display = "none";
+          SPLASH_SCREEN.style.display = "none";
         }, 2500);
       }).catch((message) => {
         alert(message);
